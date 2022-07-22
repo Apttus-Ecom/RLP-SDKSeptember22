@@ -15,7 +15,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">Conga Digital Commerce September &#x27;22 (Revenue Lifecycle Platform)</a>
+                    <a href="index.html" data-type="index-link">Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</a>
                 </li>
 
                 <li class="divider"></li>
