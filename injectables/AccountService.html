@@ -103,10 +103,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#getAccount" >getAccount</a>
+                            </li>
+                            <li>
                                 <a href="#getCurrentAccount" >getCurrentAccount</a>
                             </li>
                             <li>
                                 <a href="#getMyAccount" >getMyAccount</a>
+                            </li>
+                            <li>
+                                <a href="#onInit" >onInit</a>
                             </li>
                             <li>
                                 <a href="#setAccount" >setAccount</a>
@@ -129,6 +135,77 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAccount"></a>
+                    <span class="name">
+                        <span ><b>getAccount</b></span>
+                        <a href="#getAccount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAccount(accountId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves the account information based on the accountid passed.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>accountId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of the account to be fetched.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Account.html" target="_self" >Observable&lt;Account&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an Observable of Account.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -216,6 +293,37 @@ For guest user it retrieves the account associated with the storefront object.</
                     </div>
                     <div class="io-description">
                         <p>an observable containing the account record</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInit"></a>
+                    <span class="name">
+                        <span ><b>onInit</b></span>
+                        <a href="#onInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onInit()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>

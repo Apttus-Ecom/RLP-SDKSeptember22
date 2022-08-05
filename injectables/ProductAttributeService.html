@@ -63,7 +63,8 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Product attributes represent a characteristic of a product that can have different values like color, vendor etc.</p>
+                <p><strong>This service is a work in progress.</strong></p>
+<p>Product attributes represent a characteristic of a product that can have different values like color, vendor etc.</p>
 
             </p>
 
@@ -108,6 +109,9 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#getAttributeGroupIdsForFields" >getAttributeGroupIdsForFields</a>
+                            </li>
+                            <li>
+                                <a href="#getAttributeValueDefaults" >getAttributeValueDefaults</a>
                             </li>
                             <li>
                                 <a href="#getProductAttributes" >getProductAttributes</a>
@@ -171,8 +175,7 @@ this.productAttributeService.getAttributeGroupIdsForFields(attributes).subscribe
 // or
 this.productAttributeList$ = this.productAttributeService.getAttributeGroupIdsForFields(attributes);
 }
-}</code></pre></div><p>To Do:</p>
-</div>
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -213,8 +216,93 @@ this.productAttributeList$ = this.productAttributeService.getAttributeGroupIdsFo
 
                     </div>
                     <div class="io-description">
-                        <p>An array of product attribute in an observable.
-To Do:</p>
+                        <p>An array of product attribute in an observable.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAttributeValueDefaults"></a>
+                    <span class="name">
+                        <span ><b>getAttributeValueDefaults</b></span>
+                        <a href="#getAttributeValueDefaults"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAttributeValueDefaults(productAttributeList: Array<ProductAttribute>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns ProductAttributeValue with default attribute values for a given list of ProductAttributes.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttributeValue } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable, of } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+pav: ProductAttributeValue;
+pav$: Observable&lt;ProductAttributeValue&gt;;
+
+constructor(private productAttributeService: ProductAttributeService){}
+
+getAttributeValueDefaults(product: Product){
+this.productAttributeService.getAttributeValueDefaults(attributeList).subscribe(result =&gt; this.pav$ = result);
+// or
+this.pav$$ = of(this.productAttributeService.getAttributeValueDefaults(attributeList));
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>productAttributeList</td>
+                                    <td>
+                                            <code>Array&lt;ProductAttribute&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>accepts an array of ProductAttributes.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ProductAttributeValue.html" target="_self" >ProductAttributeValue</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>object of instance of an ProductAttributeValue.</p>
 
                     </div>
                 </td>
@@ -259,8 +347,7 @@ this.productAttributeService.getProductAttributes(product).subscribe(attributeLi
 // or
 this.productAttributeList$ = this.productAttributeService.getProductAttributes(product);
 }
-}</code></pre></div><p>To Do:</p>
-</div>
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -317,8 +404,7 @@ this.productAttributeList$ = this.productAttributeService.getProductAttributes(p
 
                     </div>
                     <div class="io-description">
-                        <p>A hot observable containing list of product attributes for the given product.
-To Do:</p>
+                        <p>A hot observable containing list of product attributes for the given product.</p>
 
                     </div>
                 </td>
@@ -375,6 +461,7 @@ this.productAttributeList$ = this.productAttributeService.setDescribeInformation
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -389,6 +476,10 @@ this.productAttributeList$ = this.productAttributeService.setDescribeInformation
                                     </td>
 
 
+                                    <td>
+                                        <p>An array of products attributes for which &#39;_describe&#39; property with metadata information needs to be added.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -400,8 +491,7 @@ this.productAttributeList$ = this.productAttributeService.setDescribeInformation
 
                     </div>
                     <div class="io-description">
-                        <p>object of instance of an ProductAttributeValue.
-To Do:</p>
+                        <p>An array of product attributes with metadata information for each attribute.</p>
 
                     </div>
                 </td>

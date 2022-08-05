@@ -84,10 +84,9 @@
 &#64;NgModule({
 imports: [ButtonModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage
-&lt;apt-add-to-cart [product]=&quot;product&quot;&gt;</apt-add-to-cart></p>
-<p>// All input and output options.
-&lt;apt-add-to-cart
+export class AppModule {}</code></pre></div><p>// Basic Usage</p>
+<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-add-to-cart [product]=&quot;product&quot;&gt;&lt;/apt-add-to-cart&gt;</code></pre></div><p>// All input and output options.</p>
+<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-add-to-cart
             [product]=&quot;product&quot;
             [showQuantityControls]=&quot;quantityControlsShowing&quot;
             [disabled]=&quot;isDisabled&quot;
@@ -97,11 +96,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
             [trigger]=&quot;willTrigger&quot;
             [btnClass]=&quot;classOfButton&quot;
             [size]=&quot;lg&quot;
-            (onAddToCart)=&quot;handleAddToCart($event)&quot;</p>
-<blockquote>
-</apt-add-to-cart>
-</blockquote>
-
+            (onAddToCart)=&quot;handleAddToCart($event)&quot;&gt;&lt;/apt-add-to-cart&gt;</code></pre></div>
     </p>
 
 
@@ -177,6 +172,20 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addToCart" >addToCart</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -250,7 +259,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(cartService: <a href="../injectables/CartService.html" target="_self">CartService</a>, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, assetModalService: AssetModalService, crService: <a href="../injectables/ConstraintRuleService.html" target="_self">ConstraintRuleService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, productOptionService: <a href="../injectables/ProductOptionService.html" target="_self">ProductOptionService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>)</code>
+<code>constructor(cartService: <a href="../injectables/CartService.html" target="_self">CartService</a>, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, assetModalService: AssetModalService, crService: <a href="../classes/ConstraintRule.html" target="_self">ConstraintRuleService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, productOptionService: <a href="../injectables/ProductOptionService.html" target="_self">ProductOptionService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>)</code>
                     </td>
                 </tr>
 
@@ -318,7 +327,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
                                                         <td>crService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/ConstraintRuleService.html" target="_self" >ConstraintRuleService</a></code>
+                                                                        <code><a href="../classes/ConstraintRule.html" target="_self" >ConstraintRuleService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -712,7 +721,48 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
 </section>
 
 
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addToCart"></a>
+                    <span class="name">
+                        <span ><b>addToCart</b></span>
+                        <a href="#addToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addToCart()</code>
+                </td>
+            </tr>
 
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method is fired when user clicks on Add to Cart button.
+Runs a constraint rule engine to look for any product recommendations for the selected cart line item.
+Fetches the price of the selected line item, opens up a modal window to display the price, quantity and name of the selected line item.
+The selected item is also added to user&#39;s current active cart.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
     <section>
     
     <h3 id="inputs">
@@ -837,7 +887,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-container>  <form [ngClass]="inputClass">    <div class="align-items-center d-flex justify-content-center input-group-sm px-4" *ngIf="showQuantityControls">      <label [for]="\'quantity\' + product.Id" class="mr-3">{{\'COMMON.QUANTITY\' | translate}}</label>      <input type="number" min="1" class="form-control mb-2 w-50" [(ngModel)]="quantity" min="1" name="quantity"        [id]="\'quantity\' + product.Id" (ngModelChange)="emitQuantity($event)" /> <!-- Stopgap approach -->    </div>    <div class="d-flex" *ngIf="view$ | async as view">      <ng-container *ngIf="view?.actions?.length > 0; else disabled">        <apt-cr-popover class="d-block flex-grow-1" [product]="product" [ruleList]="productRules$ | async">          <button class="btn btn-block" [disabled]="view?.disabled || view.actions[0]?.enabled === false"            [ladda]="loading" [attr.data-style]="\'zoom-in\'" [ngClass]="buttonClass" (click)="view.actions[0]?.onClick()"            type="button">            {{view.actions[0]?.label | translate}}          </button>        </apt-cr-popover>        <button type="button" class="btn dropdown-toggle dropdown-toggle-split"          *ngIf="(isLoggedIn$ | async) === true && view.actions.length > 1" [ngClass]="buttonClass"          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          <i class="fa fa-caret-down"></i>        </button>        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">          <ng-container *ngFor="let action of view.actions; let idx = index">            <a class="dropdown-item" href="javascript:void(0)" (click)="action.onClick()"              *ngIf="idx > 0 && action?.enabled">{{action.label}}</a>          </ng-container>        </div>      </ng-container>      <ng-template #disabled>        <button class="btn btn-block" [disabled]="true" [ngClass]="buttonClass" type="button">          {{label | translate}}        </button>      </ng-template>    </div>  </form></ng-container><apt-product-configuration-summary  *ngIf="renderConfiguration && configurationEnabled && (product?.HasOptions || product?.HasAttributes)"  [product]="product" [quantity]="quantity" #productConfiguration></apt-product-configuration-summary></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'AddToCartComponent'};
 </script>

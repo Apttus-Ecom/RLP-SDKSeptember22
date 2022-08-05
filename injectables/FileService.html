@@ -63,7 +63,8 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>File services allows to fetch and download attachment for the order/quote.</p>
+                <p><strong>This service is a work in progress.</strong></p>
+<p>File services allows to fetch and download attachment for the order/quote.</p>
 
             </p>
 
@@ -171,6 +172,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>This method used to download attachments.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -181,6 +184,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -195,6 +199,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>is an instance of <File>.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -234,6 +242,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>This method fetches all the files based on entity id.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -244,6 +254,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -258,6 +269,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Ids is an instance of string.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -269,7 +284,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Observable&lt;Array<File>&gt; returns an observable list of files based on given id.</p>
+
                     </div>
                 </td>
             </tr>

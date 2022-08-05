@@ -67,7 +67,8 @@
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p>The Generate-document component is used to generate the document for a custom Order.</p>
+        <p><strong>This component is a work in progress.</strong></p>
+<p>The Generate-document component is used to generate the document for a custom Order.</p>
 <h3>Usage</h3>
 
 <div><pre class="line-numbers"><code class="language-typescript">import { ButtonModule } from &#39;&#64;congacommerce/elements&#39;;
@@ -75,13 +76,10 @@
 &#64;NgModule({
 imports: [ButtonModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage
-&lt;apt-generate-document
-             [record]=&quot;order&quot;</p>
-<blockquote>
-</apt-generate-document>
-</blockquote>
-
+export class AppModule {}</code></pre></div><p>// Basic Usage</p>
+<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-generate-document
+             [record]=&quot;order&quot;
+&gt;&lt;/apt-generate-document&gt;</code></pre></div>
     </p>
 
 
@@ -226,7 +224,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(quoteService: <a href="../injectables/QuoteService.html" target="_self">QuoteService</a>, modalService: BsModalService, templateService: <a href="../injectables/TemplateService.html" target="_self">TemplateService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, apiService: ApiService, orderService: <a href="../injectables/OrderService.html" target="_self">OrderService</a>, emailService: <a href="../injectables/EmailService.html" target="_self">EmailService</a>)</code>
+<code>constructor(quoteService: <a href="../classes/Quote.html" target="_self">QuoteService</a>, modalService: BsModalService, templateService: <a href="../classes/Template.html" target="_self">TemplateService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, apiService: ApiService, orderService: <a href="../classes/Order.html" target="_self">OrderService</a>, emailService: EmailService)</code>
                     </td>
                 </tr>
 
@@ -247,7 +245,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
                                                         <td>quoteService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/QuoteService.html" target="_self" >QuoteService</a></code>
+                                                                        <code><a href="../classes/Quote.html" target="_self" >QuoteService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -271,7 +269,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
                                                         <td>templateService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/TemplateService.html" target="_self" >TemplateService</a></code>
+                                                                        <code><a href="../classes/Template.html" target="_self" >TemplateService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -307,7 +305,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
                                                         <td>orderService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+                                                                        <code><a href="../classes/Order.html" target="_self" >OrderService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -319,7 +317,7 @@ export class AppModule {}</code></pre></div><p>// Basic Usage
                                                         <td>emailService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/EmailService.html" target="_self" >EmailService</a></code>
+                                                                    <code>EmailService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -705,7 +703,7 @@ which calls generateDocument method to create custom document for order/quote</p
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><button class="btn btn-primary btn-outline-primary btn-raised" (click)="openModal()"  [disabled]="disableGenFormBtn || record.hasErrors">{{\'DETAILS.GENERATE_ORDER\' | translate}}</button><ng-template #docGenTemplate>  <div class="modal-header align-items-center p-0 mx-4 mt-3 border-bottom border-secondary">    <h6 class="modal-title pull-left font-weight-bold">      {{\'DETAILS.GENERATE_ORDER\' | translate}}    </h6>    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="modal-body d-flex flex-column justify-content-center">    <label>{{\'DETAILS.TEMPLATE\' | translate}} *</label>    <ng-select [items]="templateList" bindLabel="name" [(ngModel)]="generateDocObj.templateId" (change)="onChange()">    </ng-select>    <label class="mt-4">{{\'DETAILS.FILE_FORMAT\' | translate}} *</label>    <ng-select [items]="formatList" [(ngModel)]="generateDocObj.format" (change)="onChange()"></ng-select>  </div>  <div class="modal-footer">    <button class="btn btn-link text-uppercase" (click)="modalRef.hide()">{{\'COMMON.CANCEL\' | translate}}</button>    <button class="btn btn-primary btn-raised text-uppercase" type="button" (click)="generateDocument()"      [disabled]="disableGenModalBtn">{{\'DETAILS.GENERATE\' | translate}}</button>  </div></ng-template></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'GenerateDocumentComponent'};
 </script>

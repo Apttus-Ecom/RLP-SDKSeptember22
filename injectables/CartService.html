@@ -134,19 +134,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#abandonCart" >abandonCart</a>
-                            </li>
-                            <li>
                                 <a href="#addOptionToBundle" >addOptionToBundle</a>
                             </li>
                             <li>
                                 <a href="#addProductToCart" >addProductToCart</a>
-                            </li>
-                            <li>
-                                <a href="#cloneCart" >cloneCart</a>
-                            </li>
-                            <li>
-                                <a href="#clonePrimaryLines" >clonePrimaryLines</a>
                             </li>
                             <li>
                                 <a href="#createNewCart" >createNewCart</a>
@@ -162,12 +153,6 @@
                                 <a href="#getCartList" >getCartList</a>
                             </li>
                             <li>
-                                <a href="#getCartPriceStatus" >getCartPriceStatus</a>
-                            </li>
-                            <li>
-                                <a href="#getCartWithId" >getCartWithId</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Static</span>
                                 <a href="#getCurrentCartId" >getCurrentCartId</a>
                             </li>
@@ -175,16 +160,10 @@
                                 <a href="#getMyCart" >getMyCart</a>
                             </li>
                             <li>
-                                <a href="#getNextPrimaryLineNumber" >getNextPrimaryLineNumber</a>
-                            </li>
-                            <li>
                                 <a href="#isPricePending" >isPricePending</a>
                             </li>
                             <li>
                                 <a href="#onInit" >onInit</a>
-                            </li>
-                            <li>
-                                <a href="#priceCart" >priceCart</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -194,20 +173,11 @@
                                 <a href="#refreshCart" >refreshCart</a>
                             </li>
                             <li>
-                                <a href="#removeCartItem" >removeCartItem</a>
-                            </li>
-                            <li>
-                                <a href="#removeCartItems" >removeCartItems</a>
-                            </li>
-                            <li>
                                 <a href="#setCartActive" >setCartActive</a>
                             </li>
                             <li>
                                     <span class="modifier">Static</span>
                                 <a href="#setCurrentCartId" >setCurrentCartId</a>
-                            </li>
-                            <li>
-                                <a href="#updateCartItems" >updateCartItems</a>
                             </li>
                         </ul>
                     </td>
@@ -231,69 +201,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="abandonCart"></a>
-                    <span class="name">
-                        <span ><b>abandonCart</b></span>
-                        <a href="#abandonCart"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>abandonCart(cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="addOptionToBundle"></a>
                     <span class="name">
                         <span ><b>addOptionToBundle</b></span>
@@ -312,24 +219,6 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Adds an option product to a bundle product that is already in the current active cart.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { CartService, CartItem, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-
-export class MyComponent {
-
-constructor(private cartService: CartService) {}
-
-addOption(cartItem: CartItem, option: Product, quantity: number) {
-this.cartService.addOptionToBundle(cartItem.Id, {
-ProductId: option.Id,
-Quantity: quantity;
-}).subscribe(
-cartItems =&gt; {...},
-err =&gt; {...}
-);
-}
-}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -340,7 +229,6 @@ err =&gt; {...}
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -355,10 +243,6 @@ err =&gt; {...}
                                     </td>
 
 
-                                    <td>
-                                        <p>Id of the CartLineItem object for the bundle product which is getting the option added to it.</p>
-
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td>payload</td>
@@ -371,10 +255,6 @@ err =&gt; {...}
                                     </td>
 
 
-                                    <td>
-                                        <p>CartRequest object that has the productId of the option product and the quantity to add to the bundle.</p>
-
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -525,160 +405,6 @@ err =&gt; {...}
                     </div>
                     <div class="io-description">
                         <p>a void observable when the operation is complete</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="cloneCart"></a>
-                    <span class="name">
-                        <span ><b>cloneCart</b></span>
-                        <a href="#cloneCart"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>cloneCart(cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, targetId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Default value</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>CartService.getCurrentCartId()</code>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>targetId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>null</code>
-                                    </td>
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Cart.html" target="_self" >Observable&lt;Cart&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="clonePrimaryLines"></a>
-                    <span class="name">
-                        <span ><b>clonePrimaryLines</b></span>
-                        <a href="#clonePrimaryLines"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>clonePrimaryLines(lineItems: Array<CartItem>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>This method clones a list of primary cart lines.
-The cloned items get added to the active cart.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>lineItems</td>
-                                    <td>
-                                            <code>Array&lt;CartItem&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Array of cart items to be cloned on the active cart.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;Array&lt;CartItem&gt;&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>observable of cloned cart items.</p>
 
                     </div>
                 </td>
@@ -899,7 +625,7 @@ this.cartService.deleteCart(cart).subscribe(c =&gt; {...});
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getCartList()</code>
+<code>getCartList(filters?: <a href="../interfaces/FieldFilter.html" target="_self">Array&lt;FieldFilter&gt;</a>)</code>
                 </td>
             </tr>
 
@@ -910,79 +636,6 @@ this.cartService.deleteCart(cart).subscribe(c =&gt; {...});
                 <td class="col-md-4">
                     <div class="io-description"><p>Fetches the list of Cart.</p>
 </div>
-
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/CartResult.html" target="_self" >Observable&lt;CartResult&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>Array of Cart records and its total count..</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getCartPriceStatus"></a>
-                    <span class="name">
-                        <span ><b>getCartPriceStatus</b></span>
-                        <a href="#getCartPriceStatus"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getCartPriceStatus()</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>This method gives right state of the cart pricing to client.
-Returns boolean response,
-TRUE: Cart is price pending and recent attempt to price the cart has failed.
-FALSE: Cart is succesfully priced and recent attempt to price the cart is succesfull.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getCartWithId"></a>
-                    <span class="name">
-                        <span ><b>getCartWithId</b></span>
-                        <a href="#getCartWithId"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getCartWithId(cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -997,13 +650,13 @@ FALSE: Cart is succesfully priced and recent attempt to price the cart is succes
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>cartId</td>
+                                    <td>filters</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="../interfaces/FieldFilter.html" target="_self" >Array&lt;FieldFilter&gt;</a></code>
                                     </td>
 
                                     <td>
-                                        No
+                                        Yes
                                     </td>
 
 
@@ -1014,11 +667,12 @@ FALSE: Cart is succesfully priced and recent attempt to price the cart is succes
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Cart.html" target="_self" >Observable&lt;Cart&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/CartResult.html" target="_self" >Observable&lt;CartResult&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Array of Cart records and its total count..</p>
+
                     </div>
                 </td>
             </tr>
@@ -1145,81 +799,6 @@ this.cart$ = this.cartService.getMyCart();
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getNextPrimaryLineNumber"></a>
-                    <span class="name">
-                        <span ><b>getNextPrimaryLineNumber</b></span>
-                        <a href="#getNextPrimaryLineNumber"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getNextPrimaryLineNumber(cartItems: Array<CartItem>, cart: <a href="../classes/Cart.html" target="_self">Cart</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItems</td>
-                                    <td>
-                                            <code>Array&lt;CartItem&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>cart</td>
-                                    <td>
-                                                <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="isPricePending"></a>
                     <span class="name">
                         <span ><b>isPricePending</b></span>
@@ -1322,110 +901,6 @@ this.cart$ = this.cartService.getMyCart();
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="priceCart"></a>
-                    <span class="name">
-                        <span ><b>priceCart</b></span>
-                        <a href="#priceCart"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>priceCart(pricingMode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, lineNumbers?: Array<number>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>priceCart method triggers the server-side pricing engine for the cart</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { CartService } from &#39;&#64;congacommerce/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private cartService: CartService){}
-
-priceCart(pricingMode): void{
-this.cartApi.priceCart(pricingMode).subscribe(
-() =&gt; {...},
-err =&gt; {...}
-);
-}
-}</code></pre></div><p>Price active cart and publishing its state to all subscribing components.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Default value</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>pricingMode</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>this.configService.get(&#x27;pricingMode&#x27;)</code>
-                                    </td>
-
-                                    <td>
-                                        <p>Pass the pricing mode you want to run pricing with. It can be turbo OR default pricing.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>lineNumbers</td>
-                                    <td>
-                                            <code>Array&lt;number&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="publish"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -1446,6 +921,8 @@ err =&gt; {...}
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Publish method is used to emit the state of the cart.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1456,6 +933,7 @@ err =&gt; {...}
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1470,6 +948,10 @@ err =&gt; {...}
                                     </td>
 
 
+                                    <td>
+                                        <p>instance of cart.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1524,200 +1006,6 @@ err =&gt; {...}
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="removeCartItem"></a>
-                    <span class="name">
-                        <span ><b>removeCartItem</b></span>
-                        <a href="#removeCartItem"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>removeCartItem(cartItem: <a href="../classes/CartItem.html" target="_self">CartItem</a>, async: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, trigger: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Removes the specified cart item from the cart. Will trigger a reprice cart operation.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { CartService, CartItem } from &#39;&#64;congacommerce/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private cartService: CartService){}
-
-removeCartItem(cartItem: CartItem): void{
-cartItem.Apttus_Config2__Quantity__c = quantity;
-this.cartService.removeCartItem(cartItem).subscribe(
-() =&gt; {...},
-err =&gt; {...}
-);
-}
-}</code></pre></div></div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Default value</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItem</td>
-                                    <td>
-                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        <p>the instance of the cart item to remove</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>async</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>true</code>
-                                    </td>
-
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>trigger</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>true</code>
-                                    </td>
-
-                                    <td>
-                                        <p>when set to false, will not notify other components that a product has been added to the cart</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;void&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>a void observable when the operation completes</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="removeCartItems"></a>
-                    <span class="name">
-                        <span ><b>removeCartItems</b></span>
-                        <a href="#removeCartItems"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>removeCartItems(cartItems: Array<CartItem>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Deletes multiple cart items from the cart.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItems</td>
-                                    <td>
-                                            <code>Array&lt;CartItem&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Array of cart items to be deleted from the cart.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;void&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="setCartActive"></a>
                     <span class="name">
                         <span ><b>setCartActive</b></span>
@@ -1759,6 +1047,7 @@ this.cartService.setCartActive(cart).subscribe(success =&gt; {...});
                                     <td>Type</td>
                                     <td>Optional</td>
                                     <td>Default value</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1775,6 +1064,10 @@ this.cartService.setCartActive(cart).subscribe(success =&gt; {...});
                                     <td>
                                     </td>
 
+                                    <td>
+                                        <p>Instance of the cart to be set active</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>priceCart</td>
@@ -1790,6 +1083,8 @@ this.cartService.setCartActive(cart).subscribe(success =&gt; {...});
                                         <code>false</code>
                                     </td>
 
+                                    <td>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1868,91 +1163,6 @@ this.cartService.setCartActive(cart).subscribe(success =&gt; {...});
                     </div>
                     <div class="io-description">
                         
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="updateCartItems"></a>
-                    <span class="name">
-                        <span ><b>updateCartItems</b></span>
-                        <a href="#updateCartItems"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>updateCartItems(cartItemList: Array<CartItem>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Update fields on the items specified in the cart item array. Will trigger a reprice cart operation.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { CartService, CartItem } from &#39;&#64;congacommerce/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private cartService: CartService){}
-
-updateCartItems(cartItem: CartItem, quantity: number): void{
-cartItem.Quantity = quantity;
-this.cartService.updateCartItems([cartItem]).subscribe(
-() =&gt; {...},
-err =&gt; {...}
-);
-}
-}</code></pre></div></div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItemList</td>
-                                    <td>
-                                            <code>Array&lt;CartItem&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>an array of cart items. Matches based on the id and updates the related cart items with the new fields.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;Array&lt;CartItem&gt;&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>a void observable when the operation has completed.</p>
-
                     </div>
                 </td>
             </tr>
