@@ -14,13 +14,13 @@
 <title>cluster_PricingModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1590,-230.8 1590,-32.8 8,-32.8"/>
 </g>
-<g id="clust15" class="cluster">
-<title>cluster_PricingModule_exports</title>
-<polygon fill="none" stroke="black" points="16,-170.8 16,-222.8 1582,-222.8 1582,-170.8 16,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_PricingModule_declarations</title>
 <polygon fill="none" stroke="black" points="34,-40.8 34,-92.8 1565,-92.8 1565,-40.8 34,-40.8"/>
+</g>
+<g id="clust15" class="cluster">
+<title>cluster_PricingModule_exports</title>
+<polygon fill="none" stroke="black" points="16,-170.8 16,-222.8 1582,-222.8 1582,-170.8 16,-170.8"/>
 </g>
 <!-- AttributeValuePricePipe -->
 <g id="node1" class="node">

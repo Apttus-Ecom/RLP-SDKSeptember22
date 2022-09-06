@@ -89,31 +89,25 @@
                                 <a href="#AttributeGroup" >AttributeGroup</a>
                             </li>
                             <li>
-                                <a href="#DisplayName" >DisplayName</a>
+                                <a href="#DefaultValue" >DefaultValue</a>
                             </li>
                             <li>
-                                <a href="#DisplayType" >DisplayType</a>
+                                <a href="#Description" >Description</a>
+                            </li>
+                            <li>
+                                <a href="#DisplayName" >DisplayName</a>
                             </li>
                             <li>
                                 <a href="#Field" >Field</a>
                             </li>
                             <li>
-                                <a href="#FieldUpdateId" >FieldUpdateId</a>
+                                <a href="#IsRequired" >IsRequired</a>
                             </li>
                             <li>
-                                <a href="#IsHidden" >IsHidden</a>
+                                <a href="#LookupObjectName" >LookupObjectName</a>
                             </li>
                             <li>
-                                <a href="#IsPrimary" >IsPrimary</a>
-                            </li>
-                            <li>
-                                <a href="#IsReadOnly" >IsReadOnly</a>
-                            </li>
-                            <li>
-                                <a href="#ProductAttributeValueField" >ProductAttributeValueField</a>
-                            </li>
-                            <li>
-                                <a href="#Sequence" >Sequence</a>
+                                <a href="#PickListValue" >PickListValue</a>
                             </li>
                             <li>
                                 <a href="#Type" >Type</a>
@@ -176,6 +170,76 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="DefaultValue"></a>
+                    <span class="name">
+                        <span ><b>DefaultValue</b></span>
+                        <a href="#DefaultValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Expose({name: &#x27;DefaultValue&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Description"></a>
+                    <span class="name">
+                        <span ><b>Description</b></span>
+                        <a href="#Description"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Expose({name: &#x27;Description&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="DisplayName"></a>
                     <span class="name">
                         <span ><b>DisplayName</b></span>
@@ -211,41 +275,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="DisplayType"></a>
-                    <span class="name">
-                        <span ><b>DisplayType</b></span>
-                        <a href="#DisplayType"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>null</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <b>Decorators : </b>
-                        <br />
-                        <code>
-                            @Expose({name: &#x27;DisplayType&#x27;})<br />
-                        </code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="Field"></a>
                     <span class="name">
                         <span ><b>Field</b></span>
@@ -269,7 +298,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Field&#x27;})<br />
+                            @Expose({name: &#x27;Name&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -281,10 +310,45 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="FieldUpdateId"></a>
+                    <a name="IsRequired"></a>
                     <span class="name">
-                        <span ><b>FieldUpdateId</b></span>
-                        <a href="#FieldUpdateId"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>IsRequired</b></span>
+                        <a href="#IsRequired"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Expose({name: &#x27;IsRequired&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="LookupObjectName"></a>
+                    <span class="name">
+                        <span ><b>LookupObjectName</b></span>
+                        <a href="#LookupObjectName"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -304,7 +368,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;FieldUpdateId&#x27;})<br />
+                            @Expose({name: &#x27;LookupObjectName&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -316,115 +380,10 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="IsHidden"></a>
+                    <a name="PickListValue"></a>
                     <span class="name">
-                        <span ><b>IsHidden</b></span>
-                        <a href="#IsHidden"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>null</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <b>Decorators : </b>
-                        <br />
-                        <code>
-                            @Expose({name: &#x27;IsHidden&#x27;})<br />
-                        </code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="IsPrimary"></a>
-                    <span class="name">
-                        <span ><b>IsPrimary</b></span>
-                        <a href="#IsPrimary"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>null</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <b>Decorators : </b>
-                        <br />
-                        <code>
-                            @Expose({name: &#x27;IsPrimary&#x27;})<br />
-                        </code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="IsReadOnly"></a>
-                    <span class="name">
-                        <span ><b>IsReadOnly</b></span>
-                        <a href="#IsReadOnly"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>null</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <b>Decorators : </b>
-                        <br />
-                        <code>
-                            @Expose({name: &#x27;IsReadOnly&#x27;})<br />
-                        </code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ProductAttributeValueField"></a>
-                    <span class="name">
-                        <span ><b>ProductAttributeValueField</b></span>
-                        <a href="#ProductAttributeValueField"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>PickListValue</b></span>
+                        <a href="#PickListValue"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -444,42 +403,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ProductAttributeValueField&#x27;})<br />
-                        </code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="Sequence"></a>
-                    <span class="name">
-                        <span ><b>Sequence</b></span>
-                        <a href="#Sequence"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>null</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <b>Decorators : </b>
-                        <br />
-                        <code>
-                            @Expose({name: &#x27;Sequence&#x27;})<br />
+                            @Expose({name: &#x27;PickListValue&#x27;})<br />
                         </code>
                     </td>
                 </tr>

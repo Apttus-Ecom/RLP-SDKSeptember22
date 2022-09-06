@@ -75,6 +75,20 @@ It also provides support for language translation of labels based on the salesfo
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#translationModule" >translationModule</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -86,6 +100,12 @@ It also provides support for language translation of labels based on the salesfo
                         <ul class="index-list">
                             <li>
                                 <a href="#getTranslation" >getTranslation</a>
+                            </li>
+                            <li>
+                                <a href="#getTranslationModule" >getTranslationModule</a>
+                            </li>
+                            <li>
+                                <a href="#setTranslationModule" >setTranslationModule</a>
                             </li>
                             <li>
                                 <a href="#translateData" >translateData</a>
@@ -212,7 +232,7 @@ It also provides support for language translation of labels based on the salesfo
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getTranslation(lang: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>getTranslation(locale: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -221,7 +241,7 @@ It also provides support for language translation of labels based on the salesfo
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Retrieves translated labels based on current language and by configuring storefront Translation URL value.</p>
+                    <div class="io-description"><p>Retrieves translated labels based on current user&#39;s locale.</p>
 <h3 id="example">Example:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">import { TranslatorLoaderService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
@@ -254,7 +274,7 @@ export class AppModule { }</code></pre></div><p>To Do:</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>lang</td>
+                                    <td>locale</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -265,7 +285,7 @@ export class AppModule { }</code></pre></div><p>To Do:</p>
 
 
                                     <td>
-                                        <p>parameter specifying the language for translation.</p>
+                                        <p>parameter specifying the locale for translation.</p>
 
                                     </td>
                                 </tr>
@@ -279,9 +299,118 @@ export class AppModule { }</code></pre></div><p>To Do:</p>
 
                     </div>
                     <div class="io-description">
-                        <p>an Observable containing the json string.
+                        <p>an Observable containing the json string with translations.
 To Do:</p>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTranslationModule"></a>
+                    <span class="name">
+                        <span ><b>getTranslationModule</b></span>
+                        <a href="#getTranslationModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTranslationModule()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method returns the translation module set in the application for static text translations.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>string representing the translation module.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTranslationModule"></a>
+                    <span class="name">
+                        <span ><b>setTranslationModule</b></span>
+                        <a href="#setTranslationModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setTranslationModule(moduleName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method sets the translation module in the application as defined by platform admin.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>moduleName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>string value representing the translation module.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -379,6 +508,38 @@ Also translates product data, with data translations for underlying attribute gr
                     </div>
                 </td>
             </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="translationModule"></a>
+                    <span class="name">
+                        <span ><b>translationModule</b></span>
+                        <a href="#translationModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Digital Commerce&#x27;</code>
+                    </td>
+                </tr>
+
+
         </tbody>
     </table>
 </section>
